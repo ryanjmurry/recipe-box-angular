@@ -1,0 +1,7 @@
+<h2>My Recipes</h2>
+
+<p *ngFor="let recipe of recipes" (click)="onSelect(recipe)">
+  <span class="badge">{{recipe.id}}</span> {{recipe.name}}
+</p>
+
+<app-recipe-detail [recipe]="selectedRecipe"></app-recipe-detail>

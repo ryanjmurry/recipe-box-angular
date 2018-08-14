@@ -1,0 +1,11 @@
+<div *ngIf="recipe">
+  <h2>{{recipe.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{recipe.id}}</div>
+  <br>
+  Description:
+  <br> <br>
+  <p *ngFor="let ingredient of recipe.ingredients">{{ingredient}}</p>
+  <div>
+    <textarea [(ngModel)]="recipe.description" rows="8" cols="100"></textarea>
+  </div>
+</div>
